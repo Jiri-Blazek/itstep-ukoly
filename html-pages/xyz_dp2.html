@@ -1,0 +1,33 @@
+
+    <head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script> 
+     <style>     
+     #map { height: 180px; }
+     </style>
+    </head>
+        
+    <h1>Grand Hotel International</h1>
+    <p><strong>Adresa je: </strong>Koulova 1501/15, Dejvice, Praha 6</p>
+    <p><strong>Typ je: </strong>ticketMachine</p>
+    <p><strong>Oteviraci hodiny jsou: </strong>[{'from': 0, 'to': 6, 'hours': '5:00-24:00'}]</p>
+    <p><strong>Id je: </strong>dp2</p> 
+    <h3>Zemepisn poloha:</h3>  
+    <p>Zemepisna delka: 50.1093445</p>
+    <p>Zemepisna sirka: 14.3935671</p>
+    <div id="dp2" style="height: 600px; width: 600px";></div>
+    <script>
+   
+        const map = L.map("dp2").setView([50.1093445,14.3935671], 13);
+
+        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        var marker = L.marker([50.1093445,14.3935671]).addTo(map);
+     </script>
+    
