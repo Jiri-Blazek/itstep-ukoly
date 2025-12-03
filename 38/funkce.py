@@ -75,3 +75,24 @@ print(spam.count("l"))
 
 message = "Ja vam to dam."
 print(message.replace("dam", "nedam"))
+
+a = "Robert"
+print("Hello %s, how are you" % a)
+cislo = 123
+print("Hello, your number is %d." % cislo)
+print("Hello {}, your number is {}.".format(a, cislo))
+jmeno = "Laura"
+d = 10
+e = 15
+print(f"Ja jsem {jmeno} a vim, ze {d} plus {e} je {d+e}.")
+
+from datetime import datetime
+
+now = datetime.now().strftime("%d-%m-%Y,%H:%M:%S")
+print(f"actual date and time is: {now}")
+
+name = "Robert"
+print(f"{name.upper() = :-^20}")
+
+a = 10000000
+print(f"{a:,}")
